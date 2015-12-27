@@ -1,4 +1,4 @@
-# makeCacheMatrix step
+# makeCacheMatrix step. 
 makeCacheMatrix <- function(x = matrix()) {
         cm <- NULL # cached matrix
         
@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get, setInv = setInv, getInv = getInv)
 }
 
-# cacheSolve step
+# cacheSolve step. 
 cacheSolve <- function(x, ...) {
         inv <- x$getInv()
         if (! is.null(inv)) {
