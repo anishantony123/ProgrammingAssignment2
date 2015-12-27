@@ -1,4 +1,4 @@
-# makes "special" matrix that is list of functions on x
+# makeCacheMatrix step
 makeCacheMatrix <- function(x = matrix()) {
         cm <- NULL # cached matrix
         
@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get, setInv = setInv, getInv = getInv)
 }
 
-# return the cached inverse of matrix or calculate the inverse if it hasn't been
+# cacheSolve step
 cacheSolve <- function(x, ...) {
         inv <- x$getInv()
         if (! is.null(inv)) {
